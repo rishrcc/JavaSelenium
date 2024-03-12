@@ -13,9 +13,9 @@ import org.testng.annotations.*;
 public class LoginTest {
 
     public static WebDriver driver;
-    static ExtentReports report;
+/*    static ExtentReports report;
     public static ExtentTest test;
-    static ExtentReports extent = new ExtentReports();
+    static ExtentReports extent = new ExtentReports();*/
 
 
 
@@ -25,14 +25,14 @@ public class LoginTest {
         driver = new ChromeDriver();
      driver.get(LoginData.url);
      driver.manage().window().maximize();
-     ExtentSparkReporter spark = new ExtentSparkReporter("target/Spark.html");
-     extent.attachReporter(spark);
+/*     ExtentSparkReporter spark = new ExtentSparkReporter("target/Spark.html");
+     extent.attachReporter(spark);*/
     }
 
-    @AfterSuite
+/*    @AfterSuite
     public static void CleanUpReport(){
         extent.flush();
-    }
+    }*/
 
     @AfterTest
     public static void TearDown()
@@ -43,7 +43,7 @@ public class LoginTest {
     @Test
     void LoginSuccess()
     {
-        test = extent.createTest("Login Success","Test of login with valid username and password");
+//        test = extent.createTest("Login Success","Test of login with valid username and password");
         LoginHelper.enterUsernameAndPassword(LoginData.validUsername,LoginData.validPassword);
         LoginHelper.clickOnLogin();
     }
@@ -51,7 +51,7 @@ public class LoginTest {
     @Test
     void LoginFailed()
     {
-        test = extent.createTest("Login Failed","Test of login with invalid username and valid password");
+//        test = extent.createTest("Login Failed","Test of login with invalid username and valid password");
         LoginHelper.enterUsernameAndPassword(LoginData.invalidUsername,LoginData.invalidPassword);
         LoginHelper.clickOnLogin();
     }
