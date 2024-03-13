@@ -7,7 +7,4 @@ public class LoginData {
     public static String validPassword = "admin123";
     public static String invalidUsername = "Guest";
     public static String invalidPassword = "guest123";
-
-
-
 }
