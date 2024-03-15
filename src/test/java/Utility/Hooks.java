@@ -2,12 +2,11 @@ package Utility;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import org.openqa.selenium.chrome.ChromeOptions;
+import io.cucumber.java.Scenario;
 
 public class Hooks {
 
     public static BrowserDriver driver;
-    public static ChromeOptions options;
 
     @Before
     public void setup()
@@ -16,9 +15,10 @@ public class Hooks {
     }
 
     @After
-    public void tearDown()
+    public void tearDown(Scenario scenario)
     {
-        driver.closeBrowser();
+
+        driver.closeBrowser(scenario);
     }
 
 }
