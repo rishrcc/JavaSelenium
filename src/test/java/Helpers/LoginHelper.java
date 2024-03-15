@@ -1,14 +1,14 @@
 package Helpers;
+
 import Pages.LoginPage;
-import com.aventstack.extentreports.Status;
+import Utility.BrowserDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import static Tests.LoginTest.*;
 
-public class LoginHelper {
+public class LoginHelper extends BrowserDriver {
 
     public static WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
@@ -17,13 +17,10 @@ public class LoginHelper {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(LoginPage.txtUsername)));
         driver.findElement(By.xpath(LoginPage.txtUsername)).sendKeys(username);
         driver.findElement(By.xpath(LoginPage.txtPassword)).sendKeys(password);
-        test.log(Status.PASS,"Username and Password entered successfully");
     }
 
     public static void clickOnLogin()
     {
         driver.findElement(By.xpath(LoginPage.btnLogin)).click();
-        test.log(Status.PASS,"Login button clicked on successfully");
     }
-
 }
