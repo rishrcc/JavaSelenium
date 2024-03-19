@@ -1,2 +1,5 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Thu Mar 14 22:46:59 MUT 2024","Thu Mar 14 22:49:07 MUT 2024","128056","","Login","","Test the login feature","","Test the login feature",""
+"passed","Tue Mar 19 13:10:12 MUT 2024","Tue Mar 19 13:10:18 MUT 2024","6467","","Login","","Test the login feature with Examples","","Test the login feature with Examples",""
+"passed","Tue Mar 19 13:10:03 MUT 2024","Tue Mar 19 13:10:12 MUT 2024","8170","","Login","","Test the login feature","","Test the login feature",""
+"broken","Tue Mar 19 13:10:18 MUT 2024","Tue Mar 19 13:10:34 MUT 2024","15905","","Login","","Test the login feature with Examples","","Test the login feature with Examples",""
+"passed","Tue Mar 19 12:50:31 MUT 2024","Tue Mar 19 12:50:38 MUT 2024","6589","","Login","","Test the login feature with Examples","","Test the login feature with Examples",""

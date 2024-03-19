@@ -3,22 +3,23 @@ package Utility;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import org.openqa.selenium.WebDriver;
 
 public class Hooks {
 
-    public static BrowserDriver driver;
+    public WebDriver driver;
 
     @Before
     public void setup()
     {
-        driver = new BrowserDriver();
+        driver = BrowserDriver.getDriver();
     }
 
     @After
-    public void tearDown(Scenario scenario)
+    public  void tearDown(Scenario scenario)
     {
-
-        driver.closeBrowser(scenario);
+        BrowserDriver.quitDriver(scenario);
     }
 
 }
+

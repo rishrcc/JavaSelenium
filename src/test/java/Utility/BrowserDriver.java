@@ -1,6 +1,5 @@
 package Utility;
 
-import TestData.LoginData;
 import io.cucumber.java.Scenario;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.OutputType;
@@ -10,23 +9,35 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.io.ByteArrayInputStream;
 
+
 public class BrowserDriver {
     public static WebDriver driver;
 
-    public BrowserDriver(){
+    public BrowserDriver(WebDriver driver)
+    {
 
-        driver = new ChromeDriver();
-        driver.get(LoginData.url);
-        driver.manage().window().maximize();
+        BrowserDriver.driver = driver;
     }
 
-    public void closeBrowser(Scenario scenario)
+    public static WebDriver getDriver()
     {
-        if (scenario.isFailed())
-        {
-            byte[] screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
-            Allure.addAttachment("Failed Screenshot", new ByteArrayInputStream(screenshot));
+        if (driver == null) {
+            //System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
+            driver = new ChromeDriver();
         }
-        driver.quit();
+        return driver;
+    }
+
+    public static void quitDriver(Scenario scenario)
+    {
+        if (driver != null) {
+            if (scenario.isFailed())
+            {
+                byte[] screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+                Allure.addAttachment("Failed Screenshot", new ByteArrayInputStream(screenshot));
+            }
+            driver.quit();
+            driver = null;
+        }
     }
 }

@@ -8,11 +8,13 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
+import static Helpers.LoginHelper.enterUsernameAndPassword;
+
 
 public class LoginTest {
 
     public static WebDriver driver;
-    
+
     @BeforeSuite
     public static void Setup()
     {
@@ -28,16 +30,14 @@ public class LoginTest {
     }
 
     @Test
-    void LoginSuccess()
-    {
-        LoginHelper.enterUsernameAndPassword(LoginData.validUsername,LoginData.validPassword);
+    void LoginSuccess() throws InterruptedException {
+        enterUsernameAndPassword(LoginData.validUsername,LoginData.validPassword);
         LoginHelper.clickOnLogin();
     }
 
     @Test
-    void LoginFailed()
-    {
-        LoginHelper.enterUsernameAndPassword(LoginData.invalidUsername,LoginData.invalidPassword);
+    void LoginFailed() throws InterruptedException {
+        enterUsernameAndPassword(LoginData.invalidUsername,LoginData.invalidPassword);
         LoginHelper.clickOnLogin();
     }
 }
