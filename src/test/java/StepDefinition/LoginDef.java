@@ -1,16 +1,32 @@
 package StepDefinition;
+
 import Helpers.LoginHelper;
 import TestData.LoginData;
+import Utility.BrowserDriver;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.WebDriver;
 
 public class LoginDef {
 
-    @Given("^I provide username and password$")
-    public void enterUsernameAndPassword()
+    public WebDriver driver;
+    public LoginHelper loginhelper;
+
+    public LoginDef()
     {
+        driver = BrowserDriver.getDriver();
+        loginhelper = new LoginHelper(driver);
+        driver.get(LoginData.url);
+        driver.manage().window().maximize();
+    }
+    @Given("^I provide username and password$")
+    public void enterUsernameAndPassword() throws InterruptedException {
         LoginHelper.enterUsernameAndPassword(LoginData.validUsername,LoginData.validPassword);
+    }
+
+    @Given("^I enter (.*) and (.*)$")
+    public void enterUsernameAndPasswordFromExamples(String username, String password) throws InterruptedException {
+        LoginHelper.enterUsernameAndPassword(username,password);
     }
 
     @When("^I click on login button$")
@@ -19,9 +35,11 @@ public class LoginDef {
         LoginHelper.clickOnLogin();
     }
 
-    @Then("^I should view the homepage$")
-    public void navigateToHomepage()
+    @Given("^I am an admin logged in$")
+    public void adminLogged()
     {
-        System.out.println("Not defined yet");
+        LoginHelper.enterUsernameAndPassword(LoginData.validUsername,LoginData.validPassword);
+        LoginHelper.clickOnLogin();
     }
+
 }
