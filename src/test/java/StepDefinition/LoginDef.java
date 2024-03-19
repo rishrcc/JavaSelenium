@@ -20,12 +20,12 @@ public class LoginDef {
         driver.manage().window().maximize();
     }
     @Given("^I provide username and password$")
-    public void enterUsernameAndPassword() throws InterruptedException {
+    public void enterUsernameAndPassword() {
         LoginHelper.enterUsernameAndPassword(LoginData.validUsername,LoginData.validPassword);
     }
 
     @Given("^I enter (.*) and (.*)$")
-    public void enterUsernameAndPasswordFromExamples(String username, String password) throws InterruptedException {
+    public void enterUsernameAndPasswordFromExamples(String username, String password) {
         LoginHelper.enterUsernameAndPassword(username,password);
     }
 
