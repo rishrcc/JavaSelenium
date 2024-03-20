@@ -1,4 +1,4 @@
-Here's a manual on how to install the JDK (Java Development Kit) on a Windows machine and add it to the system's environment variables:
+# Here's a manual on how to install the JDK (Java Development Kit) on a Windows machine and add it to the system's environment variables:
 
 ### Step 1: Download the JDK
 
@@ -20,7 +20,7 @@ Here's a manual on how to install the JDK (Java Development Kit) on a Windows ma
 3. In the System Properties window, click on the "Environment Variables..." button.
 4. Under the "System variables" section, click "New" to add a new environment variable.
 5. Set the Variable Name to `JAVA_HOME`.
-6. Set the Variable Value to the JDK installation directory path (e.g., `C:\Program Files\Java\jdk-11`).
+6. Set the Variable Value to the JDK installation directory path (e.g., `C:\Program Files\Java\jdk-21`).
    ![image](https://github.com/rishrcc/JavaSelenium/assets/151720969/8d37f136-c4d1-4418-89a5-714f22c74ed3)
 7. Click "OK" to save the environment variable.
 
@@ -31,6 +31,7 @@ Here's a manual on how to install the JDK (Java Development Kit) on a Windows ma
 3. Click "New" to add a new entry.
 4. Add `%JAVA_HOME%\bin` to the list of paths. This allows Windows to find the `java`, `javac`, and other JDK executables.
 5. Click "OK" to save the changes.
+6. Restart your machine.
 
 ### Step 5: Verify JDK Installation
 
@@ -38,11 +39,11 @@ Here's a manual on how to install the JDK (Java Development Kit) on a Windows ma
 2. Type `java -version` and press Enter.
 3. Verify that the installed JDK version is displayed.
 
-Congratulations! You have successfully installed the JDK on your Windows machine and added it to the system's environment variables. You can now develop and run Java applications on your computer.
+## Congratulations! You have successfully installed the JDK on your Windows machine and added it to the system's environment variables. You can now develop and run Java applications on your computer.
 
 ---
 
-Here's a manual on how to install Apache Maven on a Windows machine and add it to the system's environment variables:
+# Here's a manual on how to install Apache Maven on a Windows machine and add it to the system's environment variables:
 
 ### Step 1: Download Apache Maven
 
@@ -73,6 +74,7 @@ Here's a manual on how to install Apache Maven on a Windows machine and add it t
 3. Click "New" to add a new entry.
 4. Add `%MAVEN_HOME%\bin` to the list of paths. This allows Windows to find the Maven executables.
 5. Click "OK" to save the changes.
+6. Restart your machine.
 
 ### Step 5: Verify Maven Installation
 
@@ -80,4 +82,4 @@ Here's a manual on how to install Apache Maven on a Windows machine and add it t
 2. Type `mvn -v` and press Enter.
 3. Verify that Maven is installed and the version is displayed.
 
-Congratulations! You have successfully installed Apache Maven on your Windows machine and added it to the system's environment variables. You can now use Maven to manage your Java projects and dependencies.
+## Congratulations! You have successfully installed Apache Maven on your Windows machine and added it to the system's environment variables. You can now use Maven to manage your Java projects and dependencies.
