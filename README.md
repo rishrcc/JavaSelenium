@@ -1,3 +1,60 @@
+# Here's a manual on how to install Intellij IDEA
+
+### Step 1: Download the IDE
+
+1. Visit the Intellij IDEA downloage page :
+   ![image](https://github.com/rishrcc/JavaSelenium/assets/151720969/55469c98-8528-431d-83e3-ce77a9af21bf)
+
+2. Download the community edition.
+3. Run the downloaded installer (`.exe` file).
+4. Follow the installation wizard instructions.
+5. Complete the installation process.
+
+## Congratulations! You have successfully installed the Intellij IDE on your Windows machine.
+
+---
+# To install the Allure TestOps support, Cucumber for Java, and Gherkin plugins in IntelliJ IDEA, follow these steps:
+
+### Step 1: Open IntelliJ IDEA
+
+Launch IntelliJ IDEA on your computer.
+
+### Step 2: Access Plugin Marketplace
+
+1. Click on "File" in the top menu bar.
+2. Navigate to "Settings".
+3. In the Settings window, select "Plugins" from the left-hand menu.
+
+### Step 3: Install Allure TestOps Support Plugin
+
+1. In the Plugins window, click on the "Marketplace" tab.
+2. Search for "Allure TestOps Support" in the search bar.
+3. Click on the plugin in the search results.
+4. Click the "Install" button next to the plugin.
+5. Follow the prompts to install the plugin.
+6. Restart IntelliJ IDEA to apply the changes.
+
+### Step 4: Install Cucumber for Java Plugin
+
+1. In the Plugins window, click on the "Marketplace" tab.
+2. Search for "Cucumber for Java" in the search bar.
+3. Click on the plugin in the search results.
+4. Click the "Install" button next to the plugin.
+5. Follow the prompts to install the plugin.
+6. Restart IntelliJ IDEA to apply the changes.
+
+### Step 5: Install Gherkin Plugin
+
+1. In the Plugins window, click on the "Marketplace" tab.
+2. Search for "Gherkin" in the search bar.
+3. Click on the plugin in the search results.
+4. Click the "Install" button next to the plugin.
+5. Follow the prompts to install the plugin.
+6. Restart IntelliJ IDEA to apply the changes.
+
+## Congratulations! You have successfully installed the Allure TestOps Support, Cucumber for Java, and Gherkin plugins in IntelliJ IDEA. You can now use these plugins to enhance your Cucumber and Gherkin development experience.
+---
+
 # Here's a manual on how to install the JDK (Java Development Kit) on a Windows machine and add it to the system's environment variables:
 
 ### Step 1: Download the JDK
