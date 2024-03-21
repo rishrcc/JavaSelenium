@@ -8,17 +8,17 @@ import org.openqa.selenium.WebDriver;
 public class DashboardDef {
 
     public WebDriver driver;
-    public DashboardHelper dashboardhelper;
+    public DashboardHelper DashboardAction;
 
     public DashboardDef()
     {
         driver = BrowserDriver.getDriver();
-        dashboardhelper = new DashboardHelper(driver);
+        DashboardAction = new DashboardHelper(driver);
     }
 
     @Then("^I should view the Dashboard$")
     public void navigateToDashboard()
     {
-        DashboardHelper.verifyDashboardTitle();
+        DashboardAction.verifyDashboardTitle();
     }
 }
