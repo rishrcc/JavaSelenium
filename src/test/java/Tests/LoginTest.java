@@ -8,8 +8,6 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
-import static Helpers.LoginHelper.enterUsernameAndPassword;
-
 
 public class LoginTest {
 
@@ -30,14 +28,16 @@ public class LoginTest {
     }
 
     @Test
-    void LoginSuccess() throws InterruptedException {
-        enterUsernameAndPassword(LoginData.validUsername,LoginData.validPassword);
-        LoginHelper.clickOnLogin();
+    void LoginSuccess() {
+        LoginHelper loginhelper = new LoginHelper(driver);
+        loginhelper.enterUsernameAndPassword(LoginData.validUsername,LoginData.validPassword);
+        loginhelper.clickOnLogin();
     }
 
     @Test
-    void LoginFailed() throws InterruptedException {
-        enterUsernameAndPassword(LoginData.invalidUsername,LoginData.invalidPassword);
-        LoginHelper.clickOnLogin();
+    void LoginFailed() {
+        LoginHelper loginhelper = new LoginHelper(driver);
+        loginhelper.enterUsernameAndPassword(LoginData.validUsername,LoginData.invalidPassword);
+        loginhelper.clickOnLogin();
     }
 }

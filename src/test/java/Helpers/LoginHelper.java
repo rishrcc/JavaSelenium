@@ -11,7 +11,7 @@ import java.time.Duration;
 
 public class LoginHelper extends BrowserDriver {
 
-    public static WebDriverWait wait;
+    public WebDriverWait wait;
 
     public LoginHelper(WebDriver driver) {
         super(driver);
@@ -19,14 +19,18 @@ public class LoginHelper extends BrowserDriver {
     }
 
 
-    public static void enterUsernameAndPassword(String username, String password) {
+    public void enterUsernameAndPassword(String username, String password) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(LoginPage.txtUsername)));
         driver.findElement(By.xpath(LoginPage.txtUsername)).sendKeys(username);
         driver.findElement(By.xpath(LoginPage.txtPassword)).sendKeys(password);
     }
 
-    public static void clickOnLogin()
+    public void clickOnLogin()
     {
         driver.findElement(By.xpath(LoginPage.btnLogin)).click();
+    }
+
+    public void test_method(){
+        System.out.println("Method called");
     }
 }
