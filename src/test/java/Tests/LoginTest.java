@@ -91,7 +91,7 @@ public class LoginTest {
         Thread.sleep(5000);
 
         // Close the new tab (if needed)
-        //driver.close();
+        driver.close();
 
         // Switch back to the original tab
         //driver.switchTo().window(windowHandles.iterator().next());
